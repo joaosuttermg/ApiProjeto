@@ -112,7 +112,16 @@
 			<artifactId>okhttp</artifactId>
 			<version>4.9.2</version>
 		</dependency>
+
+		<!-- Validation -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+
 	</dependencies>
+
 
 	<build>
 		<plugins>
