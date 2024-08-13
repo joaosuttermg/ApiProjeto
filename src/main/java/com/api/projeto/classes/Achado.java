@@ -1,13 +1,15 @@
 package com.api.projeto.classes;
 
-import jakarta.persistence.Entity;
+import java.time.LocalDate;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
 @Table(name = "achados")
 @Entity
-public class Achados {
+@EqualsAndHashCode(of = "id")
+public class Achado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +25,12 @@ public class Achados {
     private String Categoria;
 
     @Column(nullable = false)
-    private String DataDeEncontro;
+    private LocalDate dataDeEncontro;
+
+    @Column(nullable = false)
+    private String localDeEncontro;
+
+ 
+
 
 }
