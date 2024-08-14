@@ -16,13 +16,27 @@ public class Perdido {
     private Long id;
 
     @Column(nullable = false)
+    private String quemPerdeu;
+
+    @Column(nullable = false)
+    private String Categoria;
+
+    @Column(nullable = false)
     private String nomeDoItem;
 
     @Column(nullable = false)
+    private String descricaoDoItem;
+    
+    //Tratando a coluna para não receber dados em branco
+    // e a coluna ter o nome alterado
+    @Column(nullable = false, name = "data_perdido")
     private LocalDate dataDaPerda;
 
-    @Column(nullable = false)
+    //Tratando a coluna para não receber dados em branco
+    // e a coluna ter o nome alterado
+    @Column(nullable = false, name = "local_perdido")
     private String localDaPerda;
 
-    private String descricaoDoItem;
+    @Column(name = "perdido_ativo")
+    private boolean perdidoAtivo = true;
 }
