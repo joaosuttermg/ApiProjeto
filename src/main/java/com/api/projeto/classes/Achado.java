@@ -24,10 +24,14 @@ public class Achado {
     @Column(nullable = false)
     private String Categoria;
 
-    @Column(nullable = false)
+    //Tratando a coluna para não receber dados em branco
+    // e a coluna ter o nome alterado
+    @Column(nullable = false, name = "data_encontrado")
     private LocalDate dataDeEncontro;
 
-    @Column(nullable = false)
+    //Tratando a coluna para não receber dados em branco
+    // e a coluna ter o nome alterado
+    @Column(nullable = false, name = "local_encontrado")
     private String localDeEncontro;
 
  
