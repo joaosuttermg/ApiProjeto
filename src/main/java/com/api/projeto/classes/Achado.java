@@ -34,7 +34,8 @@ public class Achado {
     @Column(nullable = false, name = "local_encontrado")
     private String localDeEncontro;
 
- 
+    @Column(name = "achado_ativo")
+    private boolean achadoAtivo = true;
 
 
 }
