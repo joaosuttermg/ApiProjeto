@@ -1,7 +1,13 @@
 package com.api.projeto.classes;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.PastOrPresent;
+
 import java.time.LocalDate;
+
+import org.hibernate.validator.constraints.Range;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -15,6 +21,11 @@ public class Perdido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Email
+    @Column(nullable = false, unique = true)
+    private String emailDeQuemPerdeu;
+    
+    @Range(min= 3, max=100)
     @Column(nullable = false)
     private String quemPerdeu;
 
@@ -29,6 +40,7 @@ public class Perdido {
     
     //Tratando a coluna para não receber dados em branco
     // e a coluna ter o nome alterado
+    @PastOrPresent
     @Column(nullable = false, name = "data_perdido")
     private LocalDate dataDaPerda;
 

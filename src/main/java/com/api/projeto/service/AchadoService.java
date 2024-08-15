@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class AchadoService {
@@ -72,6 +71,8 @@ public class AchadoService {
     public List<Achado> getAllAtivos() {
         return achadoRepository.findByAchadoAtivoTrue();
     }
+
+
 
     public AchadoUpdateDTO updateDTO(Achado achadoExistente, AchadoUpdateDTO achadoNovo) {
 
