@@ -25,6 +25,13 @@ public class AchadoService {
         return achadoRepository.findById(id)
                                 .orElse(null);
     }
+    // public List<Achado> getCategoria(String categoria) {
+    //     // Lógica para buscar itens por categoria
+    //     Achado achado = achadoService.getByCategoria(categoria);
+    //     return achadoRepository.findByCategoria(categoria);
+                                
+                                
+    // }
 
     public Achado create(Achado achado) {
         // Adicionar tratamentos para garantir que a persistencia 

@@ -12,5 +12,7 @@ public interface AchadoRepository extends JpaRepository<Achado, Long> {
 
     // Método para buscar somente os achados ativos (GetAllAchados)
     List<Achado> findByAchadoAtivoTrue();
+    //Metodo para buscar somente pela categoria
+    //List<Achado> findByCategoria();
 
 }

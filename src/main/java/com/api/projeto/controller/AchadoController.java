@@ -23,13 +23,25 @@ public class AchadoController {
         List<Achado> achado = achadoService.getAll();
         return ResponseEntity.ok(achado);
     }
+    // @GetMapping("/{categoria}")
+    // public ResponseEntity<Achado> getByCategoria(@PathVariable String categoria) {
+    //     Achado achado = achadoService.getByCategoria(categoria);
+        
+    //     if (achado == null) {
+    //         return ResponseEntity.notFound().build();
+    //     }
+    //     return ResponseEntity.ok(achado);
+    // }
 
-    // Buscar todos os achados ativos
-    @GetMapping("/ativos")
-    public ResponseEntity<List<Achado>> getAllAtivos() {
-        List<Achado> achado = achadoService.getAllAtivos();
-        return ResponseEntity.ok(achado);
-    }
+    // @GetMapping("/{categoria}")
+    // public ResponseEntity<Achado> getByCategoria(@PathVariable String categoria) {
+    //     Achado achado = achadoService.getByCategoria(categoria);
+        
+    //     if (achado == null) {
+    //         return ResponseEntity.notFound().build();
+    //     }
+    //     return ResponseEntity.ok(categoria);
+    // }
 
     // Buscar um achado por id - getById
     @GetMapping("/{id}")
