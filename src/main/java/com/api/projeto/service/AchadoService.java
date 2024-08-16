@@ -6,8 +6,6 @@ import com.api.projeto.dto.AchadoUpdateDTO;
 import com.api.projeto.repository.AchadoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
