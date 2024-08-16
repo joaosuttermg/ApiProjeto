@@ -43,7 +43,7 @@ public class Achado {
     private String nomeDoItem;
 
     @Column(nullable = false)
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     @NotNull(message = "A categoria é obrigatória")
     private Categoria categoria;
 

@@ -39,7 +39,7 @@ public class Perdido {
     private String quemPerdeu;
 
     @Column(nullable = false)
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     @NotNull(message = "A categoria é obrigatória")
     private Categoria categoria;
 
