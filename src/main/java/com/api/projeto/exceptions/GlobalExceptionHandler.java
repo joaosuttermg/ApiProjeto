@@ -1,5 +1,6 @@
 package com.api.projeto.exceptions;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -11,7 +12,9 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
-    public ResponseEntity<String> handleMethodArgumentTypeMismatchException() {
-        return ResponseEntity.ok("Olá Mundo");
+    public ResponseEntity<String> handleMethodArgumentTypeMismatchException(MethodArgumentTypeMismatchException ex) {
+        // Aqui você pode personalizar a mensagem de erro ou fazer outras ações
+        String mensagemDeErro = "Erro de tipo de argumento: " + ex.getMessage();
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(mensagemDeErro);
     }
 }
