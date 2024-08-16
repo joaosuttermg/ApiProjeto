@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
+import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
 
@@ -34,8 +35,7 @@ public class Perdido {
     
     @Column(nullable = false)
     @NotNull(message = "O nome de quem aperdeu é obrigatório")
-    @Min(value = 3, message = "O nome deve ter no mínimo 3 letras")
-    @Max(value = 100, message = "O nome deve ter no máximo 100 letras")
+    @Size(min = 3, max = 100, message = "O nome deev ter o mínimo de 3 letras")
     private String quemPerdeu;
 
     @Column(nullable = false)

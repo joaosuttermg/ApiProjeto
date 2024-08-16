@@ -117,4 +117,5 @@ public class PerdidoService {
        public List<Perdido> getAllAtivos() {
         return perdidoRepository.findByPerdidoAtivoTrue();
     }
+   
 }

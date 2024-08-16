@@ -1,6 +1,7 @@
 package com.api.projeto.controller;
 
 import com.api.projeto.classes.Perdido;
+import com.api.projeto.dto.AchadoDTO;
 import com.api.projeto.dto.PerdidoDTO;
 import com.api.projeto.dto.PerdidoUpdateDTO;
 import com.api.projeto.service.PerdidoService;
@@ -45,6 +46,7 @@ public class PerdidoController {
     public ResponseEntity<List<PerdidoDTO>> getPerdidosDTO() {
         return ResponseEntity.ok(perdidoService.getPerdidoDTO());
     }
+   
 
     // Criar um perdido - create
     @PostMapping

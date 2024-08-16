@@ -58,6 +58,7 @@ public class AchadoController {
     public ResponseEntity<List<AchadoDTO>> getAchadosDTO() {
         return ResponseEntity.ok(achadoService.getAchadosDTO());
     }
+   
 
     // Criar um achado - create
     @PostMapping
@@ -65,6 +66,7 @@ public class AchadoController {
         Achado achadoSalvo = achadoService.create(achado);
         
         return ResponseEntity.ok(achadoSalvo);
+
     }
 
     // Atualizar um achado - update
