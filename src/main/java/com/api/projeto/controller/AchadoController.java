@@ -5,6 +5,7 @@ import com.api.projeto.dto.AchadoDTO;
 import com.api.projeto.dto.AchadoUpdateDTO;
 import com.api.projeto.service.AchadoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,8 +20,13 @@ public class AchadoController {
 
     // Buscar todos os achados - getAll
     @GetMapping
-    public ResponseEntity<List<Achado>> getAll() {
+    public ResponseEntity<?> getAll() {
+
         List<Achado> achado = achadoService.getAll();
+        if (achado==null || achado.isEmpty()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                                    .body("O recurso solicitado não foi encontrado.");
+        }
         return ResponseEntity.ok(achado);
     }
     // @GetMapping("/{categoria}")
