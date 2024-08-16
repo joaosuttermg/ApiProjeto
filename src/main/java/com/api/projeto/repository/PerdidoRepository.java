@@ -1,6 +1,5 @@
 package com.api.projeto.repository;
 
-import com.api.projeto.classes.Achado;
 import com.api.projeto.classes.Perdido;
 
 import java.util.List;

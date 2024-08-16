@@ -1,9 +1,7 @@
 package com.api.projeto.service;
 
-import com.api.projeto.classes.Achado;
 import com.api.projeto.classes.Perdido;
-import com.api.projeto.dto.AchadoDTO;
-import com.api.projeto.dto.AchadoUpdateDTO;
+
 import com.api.projeto.dto.PerdidoDTO;
 import com.api.projeto.dto.PerdidoUpdateDTO;
 import com.api.projeto.repository.PerdidoRepository;
@@ -11,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.time.LocalDate;
+
 import java.util.ArrayList;
-import java.util.Optional;
+
 
 @Service
 public class PerdidoService {
