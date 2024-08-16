@@ -17,4 +17,13 @@ public class GlobalExceptionHandler {
         String mensagemDeErro = "Erro de tipo de argumento: " + ex.getMessage();
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(mensagemDeErro);
     }
+   
+    
+    // Tratamento da exceção NullPointerException
+    @ExceptionHandler(NullPointerException.class)
+    public ResponseEntity<String> handleNullPointerException(NullPointerException ex) {
+        // Aqui você pode personalizar a mensagem de erro ou fazer outras ações
+        String mensagemDeErro = "Erro de referência nula: " + ex.getMessage();
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(mensagemDeErro);
+    }
 }
